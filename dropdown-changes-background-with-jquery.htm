@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+  <head>
+
+    <style>
+
+      .bg1 {
+        background: url('images/bg1.jpeg');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+       }
+
+       .bg2 {
+         background: url('images/bg2.jpeg');
+         background-repeat: no-repeat;
+         background-size: 100% auto;
+        }
+
+       .bg3 {
+         background: url('images/bg3.jpeg');
+         background-repeat: no-repeat;
+         background-size: 100% auto;
+        }
+
+    </style>
+
+  </head>
+
+  <body class="bg1">
+
+    <form>
+
+      <select class="target">
+
+        <option value="bg1" selected="selected">bg1</option>
+
+        <option value="bg2">bg2</option>
+
+        <option value="bg3">bg3</option>
+
+      </select>
+
+    </form>
+
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+
+    $(document).ready(function(){
+
+      $('.target').change(function(){
+
+        $('body').removeClass().addClass(this.value);
+
+      });
+
+    });
+
+  </script>
+
+</html>
